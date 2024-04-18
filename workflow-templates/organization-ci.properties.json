@@ -1,0 +1,8 @@
+{
+    "name": "Organization Workflow",
+    "description": "Organization CI starter workflow.",
+    "iconName": "example-icon",
+    "categories": [
+        "Go"
+    ]
+}
