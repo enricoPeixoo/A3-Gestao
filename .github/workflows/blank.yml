@@ -27,8 +27,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-       - uses: webiny/action-conventional-commits@v1.3.0
-         with:
-             allowed-commit-types: "default"
 
 
