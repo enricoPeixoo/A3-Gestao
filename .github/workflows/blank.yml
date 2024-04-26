@@ -28,7 +28,6 @@ jobs:
         run: echo Olá, mundo!
 
 
-      - name: Run a multi-line script
+      - name: Validate Conventional Commits
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        git log --format="%s" ${{ github.event.before }}..${{ github.sha }} | grep -E '^(feat|fix|docs|style|refactor|perf|test|build|ci)(\(.+\))?: .+' || (echo "Error: Commits should follow Conventional Commits convention." && exit 1)
