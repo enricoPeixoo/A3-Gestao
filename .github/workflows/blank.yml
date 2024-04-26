@@ -27,10 +27,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Get Previous Commit Hash
-        id: get_prev_commit
-        run: echo "::set-output name=hash::$(git rev-parse HEAD~1)"
+       - uses: webiny/action-conventional-commits@v1.3.0
+         with:
+             allowed-commit-types: "default"
 
-      - name: Validate Commit Messages
-        run: npx commitlint --from ${{ steps.get_prev_commit.outputs.hash }}
 
