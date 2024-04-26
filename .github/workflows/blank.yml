@@ -27,9 +27,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Commitlint
-        run: npm install @commitlint/{config-conventional,cli}
+      - name: Get Previous Commit Hash
+        id: get_prev_commit
+        run: echo "::set-output name=hash::$(git rev-parse HEAD~1)"
 
       - name: Validate Commit Messages
-        run: npx commitlint --from HEAD~1
+        run: npx commitlint --from ${{ steps.get_prev_commit.outputs.hash }}
 
