@@ -25,19 +25,19 @@ jobs:
 
 
       - name: Install backend dependencies
-        working-directory: A3-Gestao\neskschool\src\back-end
+        working-directory: ./neskschool/src/back-end
         run: npm install
 
       - name: Run backend
-        working-directory: A3-Gestao\neskschool\src\back-end
+        working-directory: ./neskschool/src/back-end
         run: npm run dev
 
       - name: Install frontend dependencies
-        working-directory: A3-Gestao\neskschool\src\front-end
+        working-directory: ./neskschool/src/front-end
         run: npm install
 
       - name: Run frontend
-        working-directory: A3-Gestao\neskschool\src\front-end
+        working-directory: ./neskschool/src/front-end
         run: npm run start
 
 
