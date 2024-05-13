@@ -28,6 +28,9 @@ jobs:
         working-directory: ./neskschool/src/back-end
         run: npm install
 
+      - name: Change permissions for nodemon
+        run: chmod +x ./neskschool/src/back-end/node_modules/.bin/nodemon
+
       - name: Run backend
         working-directory: ./neskschool/src/back-end
         run: npm run dev
@@ -39,6 +42,8 @@ jobs:
       - name: Run frontend
         working-directory: ./neskschool/src/front-end
         run: npm run start
+
+
 
 
 
