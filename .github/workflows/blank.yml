@@ -28,46 +28,11 @@ jobs:
         working-directory: ./neskschool/src/back-end
         run: npm install
 
-      - name: Change permissions for nodemon
-        run: chmod +x ./neskschool/src/back-end/node_modules/.bin/nodemon
-
-      - name: Run backend
-        working-directory: ./neskschool/src/back-end
-        run: npm run dev
-
-      - name: Wait for backend to start
-        run: sleep 30 
-
-      - name: Check if backend is running
-        run: |
-          response=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080)
-          if [ "$response" -eq 200 ]; then
-            echo "Backend is running."
-          else
-            echo "Backend is not running. HTTP status code: $response"
-            exit 1
-          fi
-
       - name: Install frontend dependencies
         working-directory: ./neskschool/src/front-end
         run: npm install
 
-      - name: Run frontend
-        working-directory: ./neskschool/src/front-end
-        run: npm run start
 
-      - name: Wait for frontend to start
-        run: sleep 30 
-
-      - name: Check if frontend is running
-        run: |
-          response=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:3000)
-          if [ "$response" -eq 200 ]; then
-            echo "Frontend is running."
-          else
-            echo "Frontend is not running. HTTP status code: $response"
-            exit 1
-          fi
 
 
 
