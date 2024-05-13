@@ -24,8 +24,21 @@ jobs:
       - uses: actions/checkout@v3
 
 
-      - name: Install dependencies
+      - name: Install backend dependencies
+        working-directory: neeskgames\src\back-end
         run: npm install
+
+      - name: Run backend
+        working-directory: neeskgames\src\back-end
+        run: npm run dev
+
+      - name: Install frontend dependencies
+        working-directory: neeskgames\src\front-end
+        run: npm install
+
+      - name: Run frontend
+        working-directory: neeskgames\src\front-end
+        run: npm run start
 
 
 
