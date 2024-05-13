@@ -24,8 +24,17 @@ jobs:
       - uses: actions/checkout@v3
 
 
-      - name: Install dependencies
+      - name: Install backend dependencies
+        working-directory: ./neskschool/src/back-end
         run: npm install
+
+      - name: Install frontend dependencies
+        working-directory: ./neskschool/src/front-end
+        run: npm install
+
+
+
+
 
 
 
