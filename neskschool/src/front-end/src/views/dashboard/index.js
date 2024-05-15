@@ -1,5 +1,5 @@
 import './index.css';
-import rabbit from '../../assets/img/A_rabbit_wearin_0.png';
+import rabbit from '../../assets/img/rabbit-book.png';
 import { Modal, Toast } from 'bootstrap';
 import { useEffect, useRef, useState } from 'react';
 import axios, { formToJSON } from 'axios';
@@ -189,13 +189,13 @@ export default function () {
 					<div className="col-2 sidebar d-flex flex-column p-2">
 						<div className="header d-flex">
 							<img className='img-fluid rounded me-2' src={rabbit} alt="logo" width={50} />
-							<div className='m-auto'>NeskGames</div>
+							<div className='m-auto'>NeskSchool</div>
 						</div>
 						<div className="body d-flex h-100 pt-3">
 							<div className='d-flex h-100 w-100 flex-column justify-content-between'>
 								<div>
 									<a className='text-decoration-none text-black' href="">
-										Jogos
+										Alunos
 									</a>
 								</div>
 								<div className='text-center'>

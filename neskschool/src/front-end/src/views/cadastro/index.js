@@ -1,5 +1,5 @@
 import './index.css';
-import rabbit from '../../assets/img/A_rabbit_wearin_0.png';
+import rabbit from '../../assets/img/read-rabbit.png';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
