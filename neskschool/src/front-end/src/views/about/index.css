@@ -1,5 +1,6 @@
 body{
-    background-image: linear-gradient(153deg, rgba(123, 21, 159, 1) 0%, rgba(5, 3, 100, 1) 35%);
+    background: rgb(39,37,103);
+    background: linear-gradient(90deg, rgba(39,37,103,1) 0%, rgba(33,148,222,1) 55%, rgba(15,69,103,1) 100%);
     background-repeat: no-repeat;
 }
 
@@ -15,19 +16,24 @@ body{
 }
 
 .letreiro h2 span {
-    color: #cf059d;
+    color: #63a9bb;
     font-size: 1.2em;
     font-weight: 900;
 }
 
 .letreiro a {
     padding: 8px 20px;
-    background: #cf059d;
+    background: #63a9bb;
     color: #fff;
     border-radius: 40px;
     font-weight: 500;
     letter-spacing: 1px;
     text-decoration: none;
+}
+
+#teacher-img {
+    width: 400px;
+    border-radius: 10px;
 }
 
 .thumb li :hover{
