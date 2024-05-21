@@ -4,6 +4,7 @@ CREATE TABLE user (
     password TEXT NOT NULL,
     email TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    
 );
 
 CREATE TABLE game (
