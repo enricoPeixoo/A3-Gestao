@@ -9,10 +9,9 @@ CREATE TABLE user (
 CREATE TABLE game (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
-    type TEXT NOT NULL,
+    class TEXT NOT NULL,
     img TEXT,
-    recommend INTERGER DEFAULT 0,
-    tested INTERGER DEFAULT 0,
-    rate INTERGER DEFAULT 0,
+    active INTERGER DEFAULT 0,
+    graduation TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
